@@ -1,7 +1,7 @@
-class ListsController < ApplicaationController
+class ListsController < ApplicationController
 
   def index
-    @lists = List.all?
+    @lists = List.all
     render :index
   end
 end
