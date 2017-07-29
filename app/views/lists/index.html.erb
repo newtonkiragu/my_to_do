@@ -3,7 +3,7 @@
   <h3>Here are all the lists </h3>
   <% @lists.each do |list| %>
     <li>
-      <%= list.name %>
+      <%= link_to list.name, list_path(list) %>
     </li>
     <% end %>
       <% else %>
