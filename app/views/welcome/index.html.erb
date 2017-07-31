@@ -1,0 +1,12 @@
+<h1>Lists</h1>
+<%= link_to "New List", new_list_path %>
+  <% if @lists.any? %>
+    <h3>Here are all the lists </h3>
+    <% @lists.each do |list| %>
+      <li>
+        <%= link_to list.name, list_path(list) %>
+      </li>
+      <% end %>
+        <% else %>
+          <h3>There are no lists but dont punic yet</h3>
+          <% end %>
