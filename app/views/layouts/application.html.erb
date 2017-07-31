@@ -1,14 +1,33 @@
 <!DOCTYPE html>
 <html>
+
   <head>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
     <title>MyToDo</title>
     <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+  <header>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="/" class="brand-logo">To-Do</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li>
+            <a href="sass.html">
+              <%= link_to "Return to lists", lists_path %>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
   <body>
     <%= yield %>
   </body>
+
 </html>
