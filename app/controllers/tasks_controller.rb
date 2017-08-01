@@ -36,8 +36,8 @@ class TasksController < ApplicationController
     @task.destroy
     redirect_to list_path(@list)
   end
-  private
 
+  private
   def task_params
     params.require(:task).permit(:description)
   end
